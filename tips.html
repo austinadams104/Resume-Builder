@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <Title>Login</Title>
+        <Title>Tips</Title>
     </head>
     <body>
         <div>
@@ -13,14 +13,31 @@
             <button><a href='/login'>Login</a></button>
         </div>
         <div>
-            <p>Login</p>
-            <pre>Username: <input id="name" type="text"></pre>
-			<pre>Password: <input id="interval" type="text"></pre>
-            <button><a href='/projects'>Login</a></button>
+          <h3> Pick a Catagory </h3>
+          <select id= "tipCatagories">
+            <option value="" disabled selected hidden>Please Choose...</option>
+            <option id = "rules">Unbreakable Rules</option>
+            <option id = "mistakes">Five major Mistakes to Avoid</option>
+            <option id = "skills">Skills/Qualities Employers Look For</option>
+            <option id = "formats">Resume Formats</option>
+            <option id = "resumeContent">What goes on a Resume?</option>
+            <option id = "success">Success Statements</option>
+            <option id = "other">Other Helpful Tips</option>
+          </select>
         </div>
-            <button><a href='/signup'>Sign-up</a></button>
-        <div>
+      <br />
+        <div id="results"></div>
 
-        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+          $("#tipCatagories").on("change", function(){
+            var selected = $(this).val();
+            $("#results").html(selected);
+          })
+
+          $("#tipCatagories").change(function() {
+            var id = $(this).children(":selected").attr("id");
+          });
+        </script>
     </body>
 </html>

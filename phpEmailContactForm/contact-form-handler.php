@@ -1,6 +1,6 @@
 <?php 
 $errors = '';
-$myemail = 'test@cory.henry.westhostsite.com';//<-----Put Your email address here.
+$myemail = 'admin@interactive-resume-builder.net';//<-----Put Your email address here.
 if(empty($_POST['name'])  || 
    empty($_POST['email']) || 
    empty($_POST['message']))

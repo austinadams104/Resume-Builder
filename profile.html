@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>IRB-Profile</title>
+    <!--<link rel = "stylesheet" type="text/css" href = "IRB-style.css" >
+    <script src = "IRB-code.js"></script>-->
+</head>
+<body>
+    <h1>Edit Your User Profile</h1><br><br>
+    <h3><B>Please edit your user information below:</B></h3>	
+    <div>
+        <button><a href="index.html">Home</a></button>
+        <button><a href='/projects'>Projects</a></button>
+        <button><a href='/community'>Community</a></button>
+        <button><a href="index.html">Tips</a></button>
+        <button><a href="faq.html">FAQs</a></button>
+    </div>
+    <form method="POST" action="index.html">
+
+    <P>Name: <input type="text" size="15" name="FD_profile_first_name" value="$!User.FirstName">
+    <input type="text" size="15" name="FD_profile_last_name" value="$!User.LastName"></p>
+    <P>Email Address: <input type="text" size="30" name="FD_profile_email" value="$!User.Email"></p>
+    <P>Phone: <input type="text" size="30" name="FD_profile_phone" value="$!User.Phone"></p>
+    <P>GitHub: <input type="text" size="30" name="FD_profile_github" value="$!User.GitHub"></p>
+    <P>LinkedIn: <input type="text" size="30" name="FD_profile_linkedin" value="$!User.LinkedIn"></p>
+    <P>Enter a new password: <input type="password" size="20" name="FD_profile_password" value="$!User.password"></p>
+    <P>Please confirm password: <input type="password" size="20" name="FD_profile_password" value="!User.password"></p>
+    <P><input type="submit" name="submitbtn" value="Change User Profile"></p>
+
+    </form>
+    <footer> Created by Resume Experts</footer>    
+</body>
+</html>
+ 

@@ -19,6 +19,7 @@
             <option value = "rules">Unbreakable Rules</option>
             <option value = "mistakes">Five major Mistakes to Avoid</option>
             <option value = "skills">Skills/Qualities Employers Look For</option>
+            <option value = "attributes">Influence of Attribues</option>
             <option value = "formats">Resume Formats</option>
             <option value = "resumeContent">What goes on a Resume?</option>
             <option value = "success">Success Statements</option>
@@ -32,11 +33,10 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
-          $("#tipCatagories").on("change", function(){
-            var selected = $(this).val();
-            $("#results").html(selected);
-          })
-
+          // $("#tipCatagories").on("change", function(){
+          //   var selected = $(this).val();
+          //   $("#results").html(selected);
+          // })
           $("#tipCatagories").change(function(){
             console.log($('#tipCatagories').val());
 

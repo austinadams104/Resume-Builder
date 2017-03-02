@@ -4,20 +4,20 @@
     $sql = "UPDATE user_accounts SET password='" . md5($pword) .
       "' WHERE username = '" . $user . "'";
 	if ($conn->query($sql) === TRUE) {
-    		echo "Record updated successfully";
+    		echo "Record updated successfully<br>";
 	} else {
 	    echo "Error updating record: " . $conn->error;
-	}  
+	}
 }
 
   function isUser($user, $conn){
     $sql = "SELECT user_id FROM user_accounts WHERE username='" . $user . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
-	return false;
-	} else{
-	return true;
-	}
+    	return false;
+    	} else{
+    	return true;
+    }
   }
 
   $password = $_POST["newPassword"];
@@ -45,7 +45,6 @@
   else{
     echo "Wrong username";
   }
-
 
   $conn->close();
 ?>

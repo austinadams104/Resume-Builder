@@ -12,12 +12,13 @@
             <button><a href='faqs.html'>FAQs</a></button>
             <button><a href='login.html'>Login</a></button>
         </div>
-        <div>
-            <p>Login</p>
-            <pre>Username: <input id="name" type="text"></pre>
-			<pre>Password: <input id="interval" type="text"></pre>
-            <button><a href='projects.html'>Login</a></button>            
-        </div>
+        <form action="login.php" method="post">
+          Username:<br>
+          <input type="text" name="username"><br>
+          Password:<br>
+          <input type="password" name="password"><br>
+          <input type="submit" value="Login">
+        </form>
             <button><a href='signup.html'>Sign-up</a></button>
         <div>
 

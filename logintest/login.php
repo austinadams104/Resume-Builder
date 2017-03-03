@@ -21,7 +21,7 @@
     header("Location: http://interactive-resume-builder.net/projects.html");
   }
   else{
-    echo "You have not logged in successfully<br>";
- }
-
- ?>
+      echo "You have not logged in successfully<br>";
+   }
+  $conn->close();
+   ?>	

@@ -17,6 +17,7 @@
       return true;
     }
   }
+
   $sqlUserName = "resumebu_wp604";
   $host = "localhost";
   $sqlPassword = "0,Fl455ph~W}";
@@ -27,10 +28,21 @@
   $firstName = $_POST["firstname"];
   $lastName = $_POST["lastname"];
   $email = $_POST["email"];
+  $error = "";
 
   if($password != $confirmPassword){
 	   exit("Passwords don't match");
   }
+  else if(strlen($password) < 6){
+    exit("Password is too short");
+  }
+  else if(!preg_match("#[0-9]+#", $password)){
+    exit("Password must contain a number");
+  }
+  else if(!preg_match("#[a-z]+#", $password) || !preg_match("#[A-Z]+#", $password)){
+    exit("Password must conain a mix of upper and lowercase letters");
+  }
+
   $conn = new mysqli($host, $sqlUserName, $sqlPassword, $dbName);
 
   if ($conn->connect_error) {
@@ -46,7 +58,7 @@
   $sql = "INSERT INTO user_accounts( username, PASSWORD , first_name, last_name,
     email ) VALUES ('" . $username . "',  '" . md5($password) . "',  '" . $firstName
      . "',  '" . $lastName . "', '" . $email . "');";
-     
+
   if($conn->query($sql)){
     header("Location: http://interactive-resume-builder.net/projects.html");
   }else{

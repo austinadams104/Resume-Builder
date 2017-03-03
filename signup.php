@@ -48,7 +48,7 @@
      . "',  '" . $lastName . "', '" . $email . "');";
      
   if($conn->query($sql)){
-    echo "Your new account has been created successfully<br>";
+    header("Location: http://interactive-resume-builder.net/projects.html");
   }else{
     echo "Error: " . $conn->error . "<br>";
   }

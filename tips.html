@@ -5,15 +5,21 @@
     </head>
     <body>
         <div>
-            <button><a href="index.html">Home</a></button>
+            <button><a href="home.html">Home</a></button>
             <button><a href="projects.html">Projects</a></button>
             <button><a href="community.html">Community</a></button>
             <button><a href="tips.html">Tips</a></button>
-            <button><a href="faq.html">FAQs</a></button>
+            <button><a href="faqs.html">FAQs</a></button>
             <button><a href="profile.html">Profile</a></button>
-            <button><a href="login.html">Login</a></button>
             <button><a href="index.html">Logout</a></button>
         </div>
+        <br>
+        <form action="sphider/search.php" method="get">
+			  <input type="text" name="query" id="query" size="40" value="" action="include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500">
+		  	<input type="submit" value="Search">
+		  	<input type="hidden" name="search" value="1">
+	  	  </form>
+        <br>
         <div>
           <h3> Pick a Catagory </h3>
           <select id= "tipCatagories">

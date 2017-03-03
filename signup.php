@@ -31,7 +31,6 @@
   if($password != $confirmPassword){
 	   exit("Passwords don't match");
   }
-
   $conn = new mysqli($host, $sqlUserName, $sqlPassword, $dbName);
 
   if ($conn->connect_error) {
@@ -47,10 +46,10 @@
   $sql = "INSERT INTO user_accounts( username, PASSWORD , first_name, last_name,
     email ) VALUES ('" . $username . "',  '" . md5($password) . "',  '" . $firstName
      . "',  '" . $lastName . "', '" . $email . "');";
-
+     
   if($conn->query($sql)){
     echo "Your new account has been created successfully<br>";
-  } else {
+  }else{
     echo "Error: " . $conn->error . "<br>";
   }
 

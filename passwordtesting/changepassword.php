@@ -1,5 +1,7 @@
 <?php
 
+  require 'PHPFunctions/phpfunctions.php';
+
   function changePassword($user, $pword, $conn){
     $sql = "UPDATE user_accounts SET password='" . md5($pword) .
       "' WHERE username = '" . $user . "'";
@@ -22,7 +24,7 @@
 
   $password = $_POST["newPassword"];
   $confirm = $_POST["confirmPassword"];
-  $username = $_POST["username"];
+  $username = sanitize($_POST["username"]);
   $sqlUserName = "resumebu_wp604";
   $host = "localhost";
   $sqlPassword = "0,Fl455ph~W}";

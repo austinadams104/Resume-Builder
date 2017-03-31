@@ -1,26 +1,20 @@
-<?php
-  $user = $_POST["username"];
-  $pass = $_POST["password"];
-
-  $sqlUserName = "resumebu_wp604";
-  $host = "localhost";
-  $sqlPassword = "0,Fl455ph~W}";
-  $dbName = "resumebu_userdata";
-
-  $conn = new mysqli($host, $sqlUserName, $sqlPassword, $dbName);
-
-	if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
-  $sql = "SELECT * FROM user_accounts WHERE PASSWORD='" . md5($pass) . "' AND username='" . $user . "';";
-  $results = $conn->query($sql);
-
-  if($results->num_rows <= 0){
-      echo "You have not logged in successfully<br>";
-  }
-
-  header("Location: http://interactive-resume-builder.net/projects.html");
-  
-  $conn->close();
-   ?>
+<?php 
+include './includes/header.php';
+?>
+	<form action="login1.php" method="post">
+	  Username:<br>
+	  <input type="text" name="username"><br>
+	  Password:<br>
+	  <input type="password" name="password"><br>
+	  <input type="submit" value="Login">
+	</form>
+	<br>
+	<form action="signup.php">
+		<input type="submit" value="Sign Up"/>
+	</form>
+	<form action="http://www.interactive-resume-builder.net/passwordtesting/changepassword.php">
+		<input type="submit" value="Forgot Password"/>
+	</form>
+<?php 
+	include './includes/footer.php';
+?>

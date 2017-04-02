@@ -1,9 +1,9 @@
-function createSubSection(name, start, end, info){
-    var SubSection = {
-        title: name,
-        startDate: start,
-        endDate: end,
-        description: info
+function createSubsection(){
+    var Subsection = {
+        title: null,
+        startDate: null,
+        endDate: null,
+        description: null
     };
-    return SubSection;
+    return Subsection;
 }

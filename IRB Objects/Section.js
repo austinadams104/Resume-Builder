@@ -1,6 +1,6 @@
-function createSection(name){
+function createSection(){
     var Section = {
-        title: name,
+        title: null,
         subsections: []
     };
     return Section;

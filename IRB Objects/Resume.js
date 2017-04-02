@@ -1,8 +1,7 @@
-function createResume(name) {
-    
+function createResume() {    
     var Resume = {
-        title : name,
-        heading,
+        title: null,
+        heading: null,
         sections: []    
     }; 
     return Resume;

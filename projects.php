@@ -1,5 +1,5 @@
 <?php 
-	include '/includes/header2.php';
+	include './includes/header2.php';
 ?>
 	<h1>Your resumes will show up here</h1>
 	<div>
@@ -7,5 +7,5 @@
 	</div>
 	<button>Create new Document</button>
 <?php 
-include '/includes/footer.php';
+include './includes/footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php 
-include '/includes/header2.php';
+include './includes/header2.php';
 ?>
             <h1>HOME PAGE</h1>
             <ul>
@@ -19,5 +19,5 @@ include '/includes/header2.php';
 			<input type="hidden" name="search" value="1">
 		</form>
 <?php 
-include '/includes/footer.php';
+include './includes/footer.php';
 ?>

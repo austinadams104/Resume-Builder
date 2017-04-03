@@ -128,8 +128,8 @@
 		<p>
 			<h3> What happens if I need to come back to a started Resume? </h3>
 			<p> This is a good answer </p>
-		</p>
-		<form action="./phpEmailContactForm/contact-form.html">
+		</p><br><br><br>
+		<form action="./phpEmailContactForm/contact-form.php">
 			<input type="submit" value="Ask Question"/>
 		</form>
 	</div>

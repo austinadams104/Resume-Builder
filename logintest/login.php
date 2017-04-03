@@ -1,10 +1,8 @@
 <?php
 
-  require 'PHPFunctions/phpfunctions.php';
+  require '../includes/phpfunctions.php';
 
-  
-
-  $user = sanitize($_POST["username"]);
+  $user = $_POST["username"];
   $pass = $_POST["password"];
 
   $sqlUserName = "resumebu_wp604";
@@ -18,7 +16,7 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql = "SELECT * FROM user_accounts WHERE PASSWORD='" . md5($pass) . "' AND username='" . $user . "';";
+  $sql = "SELECT * FROM user_accounts WHERE PASSWORD='" . md5($pass) . "' AND username='" . sanitize($conn, $user) . "';";
   $results = $conn->query($sql);
 
   if($results->num_rows <= 0){

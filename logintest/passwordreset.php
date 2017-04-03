@@ -1,5 +1,5 @@
 <?php
-	require 'PHPFunctions/phpfunctions.php';
+	require '../PHPFunctions/phpfunctions.php';
 
 	$message = "Hello,\n\n
 							Here is the link to reset your password.\n

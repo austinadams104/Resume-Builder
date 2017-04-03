@@ -1,6 +1,8 @@
 <?php
+  require './includes/phpfunctions.php';
+
   function isUser($user, $conn){
-    $sql = "SELECT user_id FROM user_accounts WHERE username='" . $user . "';";
+    $sql = "SELECT user_id FROM user_accounts WHERE username='" . sanitize($user) . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
       return false;
@@ -9,7 +11,7 @@
     }
   }
   function emailExists($email, $conn){
-    $sql = "SELECT user_id FROM user_accounts WHERE email='" . $email . "';";
+    $sql = "SELECT user_id FROM user_accounts WHERE email='" . sanitize($email) . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
       return false;
@@ -44,9 +46,9 @@
   }
 
   $sql = "INSERT INTO user_accounts( username, PASSWORD , first_name, last_name,
-    email ) VALUES ('" . $username . "',  '" . md5($password) . "',  '" . $firstName
-     . "',  '" . $lastName . "', '" . $email . "');";
-     
+    email ) VALUES ('" . sanitize($conn, $username) . "',  '" . md5($password) . "',  '" . sanitize($conn, $firstName)
+     . "',  '" . sanitize($conn, $lastName) . "', '" . sanitize($conn, $email) . "');";
+
   if($conn->query($sql)){
     header("Location: http://interactive-resume-builder.net/projects.php");
   }else{

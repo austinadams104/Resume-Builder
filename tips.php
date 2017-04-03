@@ -1,5 +1,5 @@
 <?php 
-	include '/includes/header2.php';
+	include './includes/header2.php';
 ?>
         <form action="sphider/search.php" method="get">
 			  <input type="text" name="query" id="query" size="40" value="" action="include/js_suggest/suggest.php" columns="2" autocomplete="off" delay="1500">
@@ -38,5 +38,5 @@
           });
         </script>
 <?php 
-	include '/includes/footer.php';
+	include './includes/footer.php';
 ?>

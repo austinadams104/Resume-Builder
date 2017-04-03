@@ -1,7 +1,10 @@
 <?php
+
+	require './PHPFunctions/phpfunctions.php';
+
 	$message = "Hello,\n\n
 							Here is the link to reset your password.\n
-							http://www.interactive-resume-builder.net/passwordtesting/changepassword.html\n\n\n
+							http://www.interactive-resume-builder.net/passwordtesting/changepassword.php\n\n\n
 							The IRB team";
 	$email = "";
 	$sqlUserName = "resumebu_wp604";

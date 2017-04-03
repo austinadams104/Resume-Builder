@@ -1,5 +1,5 @@
 <?php 
-	include '../header4contactform.php';
+	include '../includes/header2.php';
 ?>
 <!-- a helper script for vaidating the form-->
 <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>

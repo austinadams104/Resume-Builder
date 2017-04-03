@@ -1,8 +1,13 @@
 <?php
+	include('../includes/header.php');
+	require('../includes/phpfunctions.php');
+?>
+
+<?php
 
   function changePassword($user, $pword, $conn){
     $sql = "UPDATE user_accounts SET password='" . md5($pword) .
-      "' WHERE username = '" . $user . "'";
+      "' WHERE username = '" . sanitize($conn, $user) . "'";
 	if ($conn->query($sql) === TRUE) {
     		echo "Record updated successfully<br>";
 	} else {
@@ -11,7 +16,7 @@
 }
 
   function isUser($user, $conn){
-    $sql = "SELECT user_id FROM user_accounts WHERE username='" . $user . "';";
+    $sql = "SELECT user_id FROM user_accounts WHERE username='" . sanitize($conn, $user) . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
     	return false;
@@ -47,4 +52,8 @@
   }
 
   $conn->close();
+?>
+
+<?php
+	include('../includes/footer.php');
 ?>

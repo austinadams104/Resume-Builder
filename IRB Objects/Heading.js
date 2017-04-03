@@ -1,8 +1,8 @@
 function createHeading(){
     var Heading = {
-        title,
-        date,
-        description
+        title: null,
+        date: null,
+        description: null
     };
     return Heading;
 }

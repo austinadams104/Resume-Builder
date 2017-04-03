@@ -3,24 +3,41 @@
     <head>
     </head>
     <body>
-        <form>
-            Title<br>
-            <input type="text" name="resumeTitle"><br>
-            <input type="submit" value="Submit">  
-            <input type="submit" value="Done">   
+        <form id="ResumeTitle">
+            Resume<br><br>
+            Title: <input type="text" name="resumeTitle"><br>
+            <!--<input type="submit" value="Submit">  -->
+            <!--<input type="submit" value="Done">   -->
         </form>
-        <form>
-            <input type="text" name="sectionTitle"><br>
-            <input type="submit" value="Submit">             
-            <input type="submit" value="Done"> 
+        <button style="display: none" id="AddResumeTitle" onclick="addResumeTitle()">Add Resume Title</button><br> 
+        <button style="display: none" id="FinishedResume" onclick="finishedResume()">Finished Resume</button>       
+        <br><br><br>
+        <button style="display: none" id="CreateSection" onclick="generateSection()">Create Section</button>
+        <form id="SectionTitle">
+            Section<br><br>
+            Title: <input type="text" name="sectionTitle"><br>
+            <!--<input type="submit" value="Submit">             -->
+            <!--<input type="submit" value="Done"> -->
         </form>
-        <form>
-            <input type="text" name="subSectionTitle"><br>
-            <input type="text" name="startDate"><br>
-            <input type="text" name="endDate"><br>
-            <input type="text" name="description"><br>
-            <input type="submit" value="Submit"> 
-            <input type="submit" value="Done"> 
+        <button style="display: none" id="AddSectionTitle" onclick="addSectionTitle()">Add Section Title</button><br>
+        <button style="display: none" id="FinishedSection" onclick="finishedSection()">Finished Section</button>
+        <br><br><br>
+        <button style="display: none" id="CreateSubsection" onclick="generateSubsection()">Create Subsection</button>
+        <form id="Subsection">
+            Subsection<br><br>
+            Title: <input type="text" name="subSectionTitle"><br>
+            Start Date: <input type="text" name="startDate"><br>
+            End Date: <input type="text" name="endDate"><br>
+            Description: <input type="text" name="description"><br>
+            <!--<input type="submit" value="Submit"> -->
+            <!--<input type="submit" value="Done"> -->
         </form>
+        <button style="display: none" id="AddSubsection" onclick="addSubsection()">Add Subsection</button><br>
+        <button style="display: none" id="FinishedSubsection" onclick="finishedSubsection()">Finished Subsection</button>
+        <script src = "Subsection.js"></script>
+        <script src = "Section.js"></script>
+        <script src = "Heading.js"></script>
+        <script src = "Resume.js"></script>
+        <script src = "CreateResume.js"></script>
     </body>
 </html>

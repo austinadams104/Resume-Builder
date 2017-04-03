@@ -1,5 +1,10 @@
 <?php
-  $user = $_POST["username"];
+
+  require 'PHPFunctions/phpfunctions.php';
+
+  
+
+  $user = sanitize($_POST["username"]);
   $pass = $_POST["password"];
 
   $sqlUserName = "resumebu_wp604";
@@ -21,6 +26,6 @@
   }
 
   header("Location: http://interactive-resume-builder.net/projects.html");
-  
+
   $conn->close();
    ?>

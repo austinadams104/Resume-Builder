@@ -1,4 +1,6 @@
 <?php
+	require 'PHPFunctions/phpfunctions.php';
+
 	$message = "Hello,\n\n
 							Here is the link to reset your password.\n
 							http://www.interactive-resume-builder.net/passwordtesting/changepassword.html\n\n\n

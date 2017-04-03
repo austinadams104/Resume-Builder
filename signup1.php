@@ -2,7 +2,7 @@
   require './includes/phpfunctions.php';
 
   function isUser($user, $conn){
-    $sql = "SELECT user_id FROM user_accounts WHERE username='" . sanitize($user) . "';";
+    $sql = "SELECT user_id FROM user_accounts WHERE username='" . sanitize($conn, $user) . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
       return false;
@@ -11,7 +11,7 @@
     }
   }
   function emailExists($email, $conn){
-    $sql = "SELECT user_id FROM user_accounts WHERE email='" . sanitize($email) . "';";
+    $sql = "SELECT user_id FROM user_accounts WHERE email='" . sanitize($conn, $email) . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
       return false;
@@ -19,10 +19,9 @@
       return true;
     }
   }
-  $sqlUserName = "resumebu_wp604";
-  $host = "localhost";
-  $sqlPassword = "0,Fl455ph~W}";
-  $dbName = "resumebu_userdata";
+
+  $conn = connectToDatabase();
+
   $username = $_POST["username"];
   $password = $_POST["newPassword"];
   $confirmPassword = $_POST["confirmPassword"];
@@ -33,7 +32,7 @@
   if($password != $confirmPassword){
 	   exit("Passwords don't match");
   }
-  $conn = new mysqli($host, $sqlUserName, $sqlPassword, $dbName);
+
 
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

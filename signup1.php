@@ -33,11 +33,6 @@
 	   exit("Passwords don't match");
   }
 
-
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
   if(isUser($username, $conn)){
 	   exit("Username already exists");
   } else if(emailExists($email, $conn)){

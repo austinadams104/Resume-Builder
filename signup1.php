@@ -11,7 +11,7 @@
     }
   }
   function emailExists($email, $conn){
-    $sql = "SELECT user_id FROM user_accounts WHERE email='" . sanitize($conn, $email) . "';";
+    $sql = "SELECT user_id FROM user_accounts WHERE email='" . sanitize($conn,  $email) . "';";
     $results = $conn->query($sql);
     if($results->num_rows == 0){
       return false;

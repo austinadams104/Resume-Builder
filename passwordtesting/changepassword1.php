@@ -28,16 +28,9 @@
   $password = $_POST["newPassword"];
   $confirm = $_POST["confirmPassword"];
   $username = $_POST["username"];
-  $sqlUserName = "resumebu_wp604";
-  $host = "localhost";
-  $sqlPassword = "0,Fl455ph~W}";
-  $dbName = "resumebu_userdata";
 
-  $conn = new mysqli($host, $sqlUserName, $sqlPassword, $dbName);
-
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+  $conn = connectToDatabase();
+	
   if(isUser($username, $conn)){
     if($password === $confirm){
       changePassword($username, $password, $conn);

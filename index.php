@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 include './includes/header.php';
 ?>
 <div class="container">
@@ -10,6 +11,8 @@ include './includes/header.php';
 				<p>- Enter you information guided by IRB</p>
 				<p>- Save or Print your new resume!</p>
 </div>
-<?php 
+<?php
+
+print_r($_SESSION);
 include './includes/footer.php';
 ?>

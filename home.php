@@ -1,4 +1,8 @@
-<?php 
+<?php
+session_start();
+if(!isset($_SESSION['user_id'])){
+  header("Location: http://interactive-resume-builder.net/login.php");
+}
 include './includes/header2.php';
 ?>
             <h1>HOME PAGE</h1>
@@ -18,6 +22,6 @@ include './includes/header2.php';
 			<input type="submit" value="Search">
 			<input type="hidden" name="search" value="1">
 		</form>
-<?php 
+<?php
 include './includes/footer.php';
 ?>

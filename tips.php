@@ -1,4 +1,8 @@
-<?php 
+<?php
+	session_start();
+	if(!isset($_SESSION['user_id'])){
+		header("Location: http://interactive-resume-builder.net/login.php");
+	}
 	include './includes/header2.php';
 ?>
         <form action="sphider/search.php" method="get">
@@ -31,12 +35,12 @@
           $("#tipCatagories").change(function(){
             $("#resultsInfo").load("tipsInfo.html #" + $('#tipCatagories').val());
           });
-          
+
           $("#tipCatagories").change(function() {
             var id = $(this).children(":selected").attr("id");
             // if id matches category, print out that categories tips
           });
         </script>
-<?php 
+<?php
 	include './includes/footer.php';
 ?>

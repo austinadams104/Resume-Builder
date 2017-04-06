@@ -5,5 +5,5 @@
 	<li><a href="http://interactive-resume-builder.net/tips.php">Tips</a></li>
 	<li><a href="http://interactive-resume-builder.net/faqs.php">FAQs</a></li>
 	<li><a href="http://interactive-resume-builder.net/profile.php">Profile</a></li>
-	<li style="float:right"><a href="http://interactive-resume-builder.net/index.php">Log Out</a></li>
+	<li style="float:right"><a href="http://interactive-resume-builder.net/logout.php">Log Out</a></li>
 </ul>

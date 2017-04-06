@@ -1,4 +1,8 @@
-<?php 
+<?php
+	session_start();
+	if(!isset($_SESSION['user_id'])){
+		header("Location: http://interactive-resume-builder.net/login.php");
+	}
 	include './includes/header2.php';
 ?>
         <form action="sphider/search.php" method="get">
@@ -47,7 +51,7 @@
             template. (this is a placeholder text)
           </p><br>
 	  <form>
-          	<button><a href="./phpEmailContactForm/contact-form.php">Ask Question</a></button> 
+          	<button><a href="./phpEmailContactForm/contact-form.php">Ask Question</a></button>
 	  </form>
         </div>
 
@@ -85,6 +89,6 @@
               <p> This is a good answer </p>
             </p><br><br><br><br>
         </div>
-<?php 
+<?php
 	include './includes/footer.php';
 ?>

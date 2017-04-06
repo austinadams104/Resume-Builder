@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['user_id'])){
+  header("Location: http://interactive-resume-builder.net/projects.php");
+}
 include './includes/header.php';
 ?>
 <div class="container">

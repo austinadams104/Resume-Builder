@@ -14,9 +14,9 @@
 		$row = $result->fetch_assoc();
 		$username = $row["username"];
 		$randomNumber = md5($username + microtime());
-		$sql = "UPDATE user_accounts SET email_code = " . $randomNumber . " WHERE username = '" . $username . "';";
+		$sql = "UPDATE user_accounts SET email_code = '" . $randomNumber . "' WHERE username = '" . $username . "';";
 		if ($conn->query($sql) === TRUE) {
- 		   echo "Record updated successfully";
+ 		   echo "Record updated successfully with $randomNumber and $username<br>";
 		} else {
    		 echo "Error updating record: " . $conn->error;
 		}

@@ -1,5 +1,15 @@
 <?php 
-	include '../includes/header2.php';
+	include '../includes/header.php';
+	$conn = connectToDatabase();
+	if(isset($_GET["code"])&&isset($_GET["username"])){
+		$sql = "SELECT * FROM `user_accounts` WHERE  `email_code` = " . $_GET["code"] . ";";
+		$results = $conn->query($sql);
+		if($results->num_rows == 0){
+			echo "Invalid link";
+    }
+	} else{
+		echo "Error";
+	}
 ?>
   <form action="changepassword1.php" method="post">
     Username:<br>

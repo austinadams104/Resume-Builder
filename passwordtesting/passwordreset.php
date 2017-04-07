@@ -1,5 +1,6 @@
 <?php
-	include '../PHPFunctions/phpfunctions.php';
+	include '../includes/phpfunctions.php';
+	include '../includes/header.php';
 
 	$email = $_POST["email_address"];
 
@@ -16,7 +17,7 @@
 		$randomNumber = md5($username + microtime());
 		$sql = "UPDATE user_accounts SET email_code = '" . $randomNumber . "' WHERE username = '" . $username . "';";
 		if ($conn->query($sql) === TRUE) {
- 		   echo "Record updated successfully with $randomNumber and $username<br>";
+ 		   //echo "Record updated successfully with $randomNumber and $username<br>";
 		} else {
    		 echo "Error updating record: " . $conn->error;
 		}
@@ -31,4 +32,5 @@
 	}	else {
 		echo "DATABASE error. More than one of the same emails found.";
 	}
+	include '../includes/footer.php';
 ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 include './includes/header.php';
 ?>
 	<form action="login1.php" method="post">
@@ -12,9 +12,9 @@ include './includes/header.php';
 	<form action="signup.php">
 		<input type="submit" value="Sign Up"/>
 	</form>
-	<form action="http://www.interactive-resume-builder.net/passwordtesting/changepassword.php">
+	<form action="http://www.interactive-resume-builder.net/passwordtesting/forgotpassword.php">
 		<input type="submit" value="Forgot Password"/>
 	</form>
-<?php 
+<?php
 	include './includes/footer.php';
 ?>

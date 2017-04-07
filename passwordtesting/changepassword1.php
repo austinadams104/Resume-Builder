@@ -18,6 +18,7 @@
   function isUser($user, $conn){
     $sql = "SELECT user_id FROM user_accounts WHERE username='" . sanitize($conn, $user) . "';";
     $results = $conn->query($sql);
+	$row = $results->fetch_assoc();
     if($results->num_rows == 0){
     	return false;
     	} else{

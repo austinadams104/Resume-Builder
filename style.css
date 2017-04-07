@@ -19,7 +19,7 @@ header p b {
 }
 
 #container {
-	
+
 }
 
 body {
@@ -35,7 +35,11 @@ body {
 }
 
 li {
+<<<<<<< Updated upstream
 	list-style-type: none;
+=======
+	list-style-type: none; 
+>>>>>>> Stashed changes
 }
 
 li a {
@@ -54,7 +58,7 @@ footer {
 	width: 100%;
 	height: 5%;
 	background-color: #cececf;
-	color: #1b419a;	
+	color: #1b419a;
 	bottom: 0;
 	font-size: 20px;
 	position: fixed;

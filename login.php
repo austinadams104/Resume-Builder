@@ -1,5 +1,9 @@
 <?php
-include './includes/header.php';
+	session_start();
+	include './includes/header.php';
+	if(isset($_SESSION['message'])){
+		echo $_SESSION['message'];
+	}
 ?>
 	<form action="login1.php" method="post">
 	  Username:<br>

@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(!isset($_SESSION['user_id'])){
+		$_SESSION['message'] = "You are not logged in";
 		header("Location: http://interactive-resume-builder.net/login.php");
 	}
 	include './includes/header2.php';

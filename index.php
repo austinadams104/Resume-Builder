@@ -16,6 +16,5 @@ include './includes/header.php';
 </div>
 <?php
 
-print_r($_SESSION);
 include './includes/footer.php';
 ?>

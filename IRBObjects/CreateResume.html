@@ -12,8 +12,8 @@
         <button style="display: none" id="AddResumeTitle" onclick="addResumeTitle()">Add Resume Title</button><br> 
         <button style="display: none" id="FinishedResume" onclick="finishedResume()">Finished Resume</button>       
         <br><br><br>
-        <button style="display: none" id="CreateSection" onclick="generateSection()">Create Section</button>
-        <form id="SectionTitle">
+        <button style="display: none" id="CreateSection" onclick="generateSection()">Create Section</button><br>
+        <form style="display: none" id="SectionTitle">
             Section<br><br>
             Title: <input type="text" name="sectionTitle"><br>
             <!--<input type="submit" value="Submit">             -->
@@ -22,8 +22,8 @@
         <button style="display: none" id="AddSectionTitle" onclick="addSectionTitle()">Add Section Title</button><br>
         <button style="display: none" id="FinishedSection" onclick="finishedSection()">Finished Section</button>
         <br><br><br>
-        <button style="display: none" id="CreateSubsection" onclick="generateSubsection()">Create Subsection</button>
-        <form id="Subsection">
+        <button style="display: none" id="CreateSubsection" onclick="generateSubsection()">Create Subsection</button><br>
+        <form style="display: none" id="Subsection">
             Subsection<br><br>
             Title: <input type="text" name="subSectionTitle"><br>
             Start Date: <input type="text" name="startDate"><br>
@@ -39,5 +39,7 @@
         <script src = "Heading.js"></script>
         <script src = "Resume.js"></script>
         <script src = "CreateResume.js"></script>
+
+        <div id="Preview"></div>
     </body>
 </html>

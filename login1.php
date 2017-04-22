@@ -17,7 +17,7 @@ session_start();
     die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql = "SELECT user_id, first_name, last_name, email FROM user_accounts WHERE PASSWORD='" . md5($pass) . "' AND username='" . sanitize($conn, $user) . "';";
+  $sql = "SELECT user_id, username, first_name, last_name, email FROM user_accounts WHERE PASSWORD='" . md5($pass) . "' AND username='" . sanitize($conn, $user) . "';";
   $results = $conn->query($sql);
 
   if($results->num_rows <= 0){
@@ -31,7 +31,7 @@ session_start();
     $_SESSION["last_name"] = $row["last_name"];
   }
 
-  header("Location: http://interactive-resume-builder.net/projects.php");
+  header("Location: https://interactive-resume-builder.net/projects.php");
 
   $conn->close();
    ?>

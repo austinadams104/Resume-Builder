@@ -1,9 +1,5 @@
 <?php
-	session_start();
-	include './includes/header.php';
-	if(isset($_SESSION['message'])){
-		echo $_SESSION['message'];
-	}
+include './includes/header.php';
 ?>
 	<form action="login1.php" method="post">
 	  Username:<br>
@@ -16,7 +12,7 @@
 	<form action="signup.php">
 		<input type="submit" value="Sign Up"/>
 	</form>
-	<form action="http://www.interactive-resume-builder.net/passwordtesting/forgotpassword.php">
+	<form action="https://www.interactive-resume-builder.net/passwordtesting/forgotpassword.php">
 		<input type="submit" value="Forgot Password"/>
 	</form>
 <?php

@@ -26,6 +26,7 @@ session_start();
   else if($results->num_rows == 1){
     $row = $results->fetch_assoc();
     $_SESSION["user_id"] = $row["user_id"];
+    $_SESSION["username"] = $row["username"];
     $_SESSION["first_name"] = $row["first_name"];
     $_SESSION["last_name"] = $row["last_name"];
   }

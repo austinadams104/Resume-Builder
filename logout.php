@@ -1,7 +1,7 @@
 <?php
   session_start();
   session_unset();
-  //session_destroy();
+  session_destroy();
 
-  header("Location: http://interactive-resume-builder.net/index.php");
+  header("Location: https://interactive-resume-builder.net/index.php");
 ?>

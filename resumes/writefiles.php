@@ -20,12 +20,18 @@ if ($result->num_rows > 0){
   while ($row = $result->fetch_assoc()){
           $data[] = $row['user_id']; // add the row in to the results (data) array
   }
+  $datalength = count($data);
+
+  $sql = "SELECT * FROM resumes where resume_name = $resumename AND user_id = " . $data[0] . " AND (";
+
+  for($i = 0; $i < $datalength; $i++){
+    $sql .= "user_id = " . $data[$i] .;
+  }
 } else{
-  
+
 }
 
 
-$sql = "SELECT * FROM resumes where resume_name = $resumename AND ;";
 $results = $conn->query($sql);
 
 if($results->num_rows <= 0){

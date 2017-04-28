@@ -3,12 +3,10 @@ session_start();
 if(!isset($_SESSION['user_id'])){
   echo "Error not logged on";
 }
-
 require '../includes/phpfunctions.php';
 
 $conn = connectToDatabase();
-
-$sql = "SELECT resume_id from permissions where user_id=" . $_SESSION['user_id'] . " AND permission = 1;";
+$sql = "SELECT resume_id from permissions where user_id=" . $_SESSION['user_id'] . " AND permission = 2;";
 $result = $conn->query($sql);
 $resumes = array();
 
@@ -29,11 +27,12 @@ if ($result->num_rows > 0) {
     echo "<ul>";
 	$counter = 0;
     while($row = $results->fetch_assoc()) {
-      echo "<li>" . $row["resume_name"] . "&emsp;<button onclick='removeResume(" . $row["resume_id"] . ")'>Delete Resume</button>&emsp;<button onclick='askShareResume(" . $row["resume_id"] . ")'>Share Resume</button></li>";
+      echo "<li>" . $row["resume_name"] . "</li>";
     }
     echo "</ul>";
 
 } else {
-    echo "You don't have a resume yet. Create one now?";
+    echo "You don't have any resumes shared with you yet. Make a friend now?";
 }
- ?>
+
+?>
